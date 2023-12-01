@@ -4,6 +4,7 @@ GIT_SKM_REPO=https://github.com/splashkit/skm.git
 
 HOME_PATH=~
 INSTALL_PATH="${HOME_PATH}/.splashkit"
+BRANCH=develop
 
 if [[ `uname` = MINGW* ]] || [[ `uname` = MSYS* ]]; then
     if [[ $MSYS2_PATH_TYPE != 'inherit' ]]; then
@@ -31,7 +32,7 @@ if [ -d "${INSTALL_PATH}" ]; then
     exit 1
 fi
 
-git clone --depth 1 --branch master $GIT_SKM_REPO "${INSTALL_PATH}"
+git clone --depth 1 --branch $BRANCH $GIT_SKM_REPO "${INSTALL_PATH}"
 
 # Add SKM app to path without needing sudo
 
